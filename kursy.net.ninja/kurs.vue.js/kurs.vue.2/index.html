@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kurs.vue.2</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+
+    <h1>Hello, Vue</h1>
+
+    <div id="app">
+
+        <!-- <h2>I am the template rn ok</h2> -->
+
+        <div v-if="showBooks">
+            <p>{{ title }} - {{ author }} - {{ age }}</p>
+        </div>
+
+        <button @click="toggleShowBooks">
+            <span v-if="showBooks">Hide Books</span>
+            <span v-else>Show Books</span>
+        </button>
+        
+        <br /> <br />
+
+        <div v-show="showBooks">
+            Currenty showing books
+        </div>
+
+        
+        <!-- <button v-on:click="age++">Increase age</button>
+
+        <br /> <br />
+
+        <button v-on:click="age--">Decrease age</button>
+
+
+        <br /> <br />
+
+
+        <div @click="changeTitle('Metro 2035')">Metro...</div> -->
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
