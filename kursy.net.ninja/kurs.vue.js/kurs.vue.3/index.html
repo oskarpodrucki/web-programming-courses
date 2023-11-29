@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kurs.vue.2</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        /* .box{
+            padding: 100px 0;
+            width: 400px;
+            text-align: center;
+            background-color: #ddd;
+            margin: 20px;
+            display: inline-block;
+        } */
+        body {
+            background-color: #eee;
+            max-width: 960px;
+            margin: 20px auto;
+        }
+
+        p,
+        h3,
+        ul {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        li {
+            list-style-type: none;
+            background-color: #fff;
+            margin: 20px auto;
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        li.fav {
+            background-color: #ff9edf;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Hello, Vue</h1>
+
+    <div id="app">
+
+
+        <!-- <div v-if="showBooks">
+            <p>{{ title }} - {{ author }} - {{ age }}</p>
+        </div> -->
+
+
+        <!-- attribute binding -->
+
+        <!-- <a :href="url" target="_blank">The best website ever i swear bro</a> -->
+
+        <br /> <br />
+
+        <!-- <div v-if="showBooks">
+            <ul>
+                <li v-for="book in books" :class="{ fav: book.isFav }" @click="toogleFav(book)">
+                    <img :src="book.img" :alt="book.title" style="max-width: 100%; max-height: 200px;">
+                    <h3>{{ book.title }}</h3>
+                    <h4>{{ book.author }}</h4>
+                    <h5>{{ book.age }}</h5>
+                </li>
+            </ul>
+        </div> -->
+
+        <div v-if="showBooks">
+            <ul>
+                <li v-for="book in filteredBooks" :class="{ fav: book.isFav }" @click="toogleFav(book)">
+                    <img :src="book.img" :alt="book.title" style="max-width: 100%; max-height: 200px;">
+                    <h3>{{ book.title }}</h3>
+                    <h4>{{ book.author }}</h4>
+                    <h5>{{ book.age }}</h5>
+                </li>
+            </ul>
+        </div>
+
+        <button @click="toggleShowBooks">
+            <span v-if="showBooks">Hide Books</span>
+            <span v-else>Show Books</span>
+        </button>
+
+        <br /> <br />
+
+        <div v-show="showBooks">
+            Currenty showing books
+        </div>
+
+        <!-- mouse events
+        <div class="box" v-on:mouseover="handleEvent(5)">mouseover (enter)</div>
+        <div class="box" @mouseleave="handleEvent($event, 1)">mouseleave</div>
+        <div class="box" @dblclick="handleEvent">double click</div>
+        <div class="box" @mousemove="handleMouseMove">position - {{ x }} {{ y }}</div> -->
+
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
