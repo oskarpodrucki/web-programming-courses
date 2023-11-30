@@ -43,7 +43,8 @@ INSERT INTO `uzytkownicy` (`id`, `user`, `pass`, `email`, `drewno`, `kamien`, `z
 (8, 'jakub', 'ertyu', 'jakub@gmail.com', 2467, 557, 876, 0),
 (9, 'janusz', 'cvbnm', 'janusz@gmail.com', 65, 456, 2467, 0),
 (10, 'roman', 'dfghj', 'roman@gmail.com', 97, 226, 245, 23),
-(11, 'oskar', '$2y$10$vmSNIWWZApqXydGJ5q9XC.63kF4JvvURC0l2Ns4Qh3nNc55OL.Y6W', 'oskar@gmail.com', 100, 100, 100, 14);
+(11, 'oskar', '$2y$10$vmSNIWWZApqXydGJ5q9XC.63kF4JvvURC0l2Ns4Qh3nNc55OL.Y6W', 'oskar@gmail.com', 100, 100, 100, 14),
+(12, 'test', '$2y$10$vmSNIWWZApqXydGJ5q9XC.63kF4JvvURC0l2Ns4Qh3nNc55OL.Y6W', 'test@gmail.com', 100, 100, 100, 14);
 
 --
 -- Indeksy dla zrzutów tabel
