@@ -2,8 +2,33 @@
   
   <h1>{{ title }}</h1>
 
-  <Modal :header="header" :text="text" />
-  
+  <p>Welcome</p>
+
+  <div v-if="showModal">
+    <Modal theme="" @close="toggleModal">
+      <template v-slot:links>
+        <a href="#">sing up now</a>
+        <a href="#">more info</a>
+      </template>
+      <h1>Giveway!</h1> 
+      <p>nosiemactuwas?</p>
+    </Modal>
+  </div>
+
+  <br />
+
+  <div v-if="showModal">
+    <Modal theme="" @close="toggleModalTwo">
+      <h1>Sign up to the newsletter</h1> 
+      <p>nosiemactuwas?</p>
+    </Modal>
+  </div>
+
+  <br />
+
+<button @click.alt="toggleModalTwo">Open Modal (alt)</button>
+<button @click="toggleModal">Open Modal</button>
+
 </template>
 
 <script>
@@ -16,9 +41,18 @@ export default {
     return {
       title: 'My first Vue.js App :*',
       header: 'Sing up for new giveway!',
-      text: 'nosiemact?'
+      text: 'nosiemact?',
+      showModal: false
     }
   },
+  methods: {
+    toggleModal() {
+      this.showModal = !this.showModal
+    },
+    toggleModalTwo() {
+      this.showModal = !this.showModal
+    }
+  }
 }
 </script>
 
