@@ -2,7 +2,7 @@
   
   <h1>{{ title }}</h1>
 
-  <Modal />
+  <Modal :header="header" :text="text" />
   
 </template>
 
@@ -14,7 +14,9 @@ export default {
   components: { Modal },
   data() {
     return {
-      title: 'My first Vue.js App :*'
+      title: 'My first Vue.js App :*',
+      header: 'Sing up for new giveway!',
+      text: 'nosiemact?'
     }
   },
 }
