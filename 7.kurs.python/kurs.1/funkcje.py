@@ -1,40 +1,44 @@
+import math
+
+# Function to calculate factorial
 def silnia(n):
     # 5! = 1 * 2 * 3 * 4 * 5
     res = 1
-    for x in range(1, n+1):
-        res = res * x
+    for x in range(1, n + 1):
+        res *= x
     return res
 
-# print(silnia(5))
-
+# Open and read lines from a file
 lines = []
 with open(".plik.txt", encoding='UTF-8') as f:
-    # print(f.readlines())
     for line in f:
         lines.append(line.strip())
+    # Print the read lines
     print(lines)
 
+# Calculate factorial for each number in the file
 for number in lines:
     print(silnia(int(number)))
 
+# GCD calculation
+print(math.gcd(24, 36))
 
-import math
+# List of grades
+oceny = [4, 1, 3, 6, 5]
 
-#24, 36
-print(math.gcd(24,36))
+# Find max and min grades
+print("Max grade:", max(oceny))
+print("Min grade:", min(oceny))
 
+# Square root calculation
+print("Square root of 36:", math.sqrt(36))
 
-oceny = [4,1,3,6,5]
+# Round a number to a specific decimal place
+print("Round 10.2131324 to 3 decimal places:", round(10.2131324, 3))
 
-print(max(oceny))
-print(min(oceny))
+# Ceil and floor functions
+print("Ceil of 10.5:", math.ceil(10.5))
+print("Floor of 10.5:", math.floor(10.5))
 
-
-print(math.sqrt(36))
-
-print(round(10.2131324, 3))
-
-print(math.ceil(10.5))
-print(math.floor(10.5))
-
-print(abs(-124))
+# Absolute value calculation
+print("Absolute value of -124:", abs(-124))
