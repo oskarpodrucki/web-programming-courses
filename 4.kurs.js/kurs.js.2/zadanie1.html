@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="utf-8" />
+
+	<script type="text/javascript">
+
+		function sprawdz() {
+			var liczba = document.getElementById("pole").value;
+
+			if (liczba > 0) document.getElementById("wynik").innerHTML = "dodatnia";
+			else if (liczba < 0) document.getElementById("wynik").innerHTML = "ujemna";
+			else if (liczba == 0) document.getElementById("wynik").innerHTML = "zero";
+			else document.getElementById("wynik").innerHTML = "to nie jest liczba. You know nothing John Snow";
+
+		}
+
+	</script>
+</head>
+
+<body>
+
+	<input type="text" id="pole" />
+	<input type="submit" value="Sprawdź" onclick="sprawdz()" />
+
+	<div id="wynik"></div>
+
+</body>
+
+</html>
