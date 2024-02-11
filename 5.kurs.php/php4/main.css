@@ -1,0 +1,136 @@
+body
+{
+	/* Background pattern from subtlepatterns.com */
+	background-image: url("img/hexellence.png");
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+	color: #111;
+}
+
+a:link    { color: #36b03c; text-decoration: none; }
+a:visited { color: #36b03c; }
+a:active  { color: #36b03c; }
+a:hover   { color: #37b93d; text-decoration: underline; }
+
+h1
+{
+	font-family: 'Lobster', cursive;
+	font-size: 64px;
+	font-weight: 400;
+	text-align: center;
+	letter-spacing: 3px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+
+p
+{
+	text-align: center;
+}
+
+.content
+{
+	text-align: justify;
+	margin: 20px 0;
+}
+
+.container
+{
+	background-color: white;
+	width: 900px;
+	padding: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 55px;
+	-webkit-box-shadow: 3px 3px 30px 5px rgba(204,204,204,0.9);
+	-moz-box-shadow: 3px 3px 30px 5px rgba(204,204,204,0.9);
+	box-shadow: 3px 3px 30px 5px rgba(204,204,204,0.9);
+	text-align: center;
+}
+
+.partL
+{
+	float: left;
+	width: 330px;
+	margin-left: 30px;
+	margin-right: 20px;
+}
+
+.partR
+{
+	float: left;
+	width: 490px;
+}
+
+.cover
+{
+	margin-top: 20px;
+}
+
+form
+{
+	margin-top: 30px;
+}
+
+input[type=text],
+input[type=email],
+input[type=password]
+{
+	width: 380px;
+	background-color: #efefef;
+	color: #666;
+	border: 2px solid #ddd;
+	border-radius: 5px;
+	font-size: 20px;
+	padding: 10px;
+	box-sizing: border-box;
+	outline: none;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=password]:focus
+{
+	-webkit-box-shadow: 0px 0px 10px 2px rgba(204,204,204,0.9);
+	-moz-box-shadow: 0px 0px 10px 2px rgba(204,204,204,0.9);
+	box-shadow: 0px 0px 10px 2px rgba(204,204,204,0.9);
+	border: 2px solid #a5cda5;
+	background-color: #e9f3e9;
+	color: #428c42;
+}
+
+input[type=submit]
+{
+	width: 380px;
+	background-color: #36b03c;
+	font-size: 20px;
+	color: white;
+	padding: 15px 10px;
+	margin-top: 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	letter-spacing: 2px;
+	outline: none;
+}
+
+input[type=submit]:focus
+{
+	-webkit-box-shadow: 0px 0px 15px 5px rgba(204,204,204,0.9);
+	-moz-box-shadow: 0px 0px 15px 5px rgba(204,204,204,0.9);
+	box-shadow: 0px 0px 15px 5px rgba(204,204,204,0.9);
+}
+
+input[type=submit]:hover
+{
+	background-color: #37b93d;
+}
+
+th, td
+{
+	border: 1px solid black;
+	padding: 5px;
+	width: 100%;
+}

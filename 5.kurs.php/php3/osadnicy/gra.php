@@ -1,10 +1,10 @@
 <?php
 
-	session_start();  // Rozpocznij sesję
-
-	// Sprawdź, czy użytkownik jest zalogowany
-	if (!isset($_SESSION['zalogowany'])) {
-		header('Location: index.php');  // Przekieruj na stronę logowania, jeśli nie jest zalogowany
+	session_start();
+	
+	if (!isset($_SESSION['zalogowany']))
+	{
+		header('Location: index.php');
 		exit();
 	}
 	
@@ -21,13 +21,27 @@
 	
 <?php
 
-	echo "<p>Witaj ".$_SESSION['user'].'! [ <a href="logout.php">Wyloguj się!</a> ]</p>';  // Wyświetl powitanie i link do wylogowania
-	echo "<p><b>Drewno</b>: ".$_SESSION['drewno'];  // Wyświetl ilość drewna
-	echo " | <b>Kamień</b>: ".$_SESSION['kamien'];  // Wyświetl ilość kamienia
-	echo " | <b>Zboże</b>: ".$_SESSION['zboze']."</p>";  // Wyświetl ilość zboża
+	echo "<p>Witaj ".$_SESSION['user'].'! [ <a href="logout.php">Wyloguj się!</a> ]</p>';
+	echo "<p><b>Drewno</b>: ".$_SESSION['drewno'];
+	echo " | <b>Kamień</b>: ".$_SESSION['kamien'];
+	echo " | <b>Zboże</b>: ".$_SESSION['zboze']."</p>";
 	
-	echo "<p><b>E-mail</b>: ".$_SESSION['email'];  // Wyświetl adres e-mail użytkownika
-	echo "<br /><b>Dni premium</b>: ".$_SESSION['dnipremium']."</p>";  // Wyświetl liczbę dni premium użytkownika
+	echo "<p><b>E-mail</b>: ".$_SESSION['email'];
+	echo "<br /><b>Data wygaśnięcia premium</b>: ".$_SESSION['dnipremium']."</p>";
+	
+		
+	$dataczas = new DateTime('2150-05-01 09:33:59');
+	
+	echo "Data i czas serwera: ".$dataczas->format('Y-m-d H:i:s')."<br>";
+	
+	$koniec = DateTime::createFromFormat('Y-m-d H:i:s', $_SESSION['dnipremium']);
+	
+	$roznica = $dataczas->diff($koniec);
+	
+	if($dataczas<$koniec)
+	echo "Pozostało premium: ".$roznica->format('%y lat, %m mies, %d dni, %h godz, %i min, %s sek');
+	else
+	echo "Premium nieaktywne od: ".$roznica->format('%y lat, %m mies, %d dni, %h godz, %i min, %s sek');	
 	
 ?>
 

@@ -1,0 +1,15 @@
+	echo time()."<br>";
+	
+	echo date('Y-m-d H:i:s')."<br>";
+	
+	$dataczas = new DateTime();
+	
+	echo $dataczas->format('Y-m-d H:i:s')."<br>".print_r($dataczas);
+	
+	$dzien = 26;
+	$miesiac = 7;
+	$rok = 1875;
+	
+	if(checkdate($dzien, $miesiac, $rok))
+		echo "<br>Poprawna data!";
+	else echo "<br>Niepoprawna data!";

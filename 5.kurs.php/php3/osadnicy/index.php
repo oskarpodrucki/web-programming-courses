@@ -1,9 +1,10 @@
 <?php
 
-	session_start();  // Rozpocznij sesję
-
-	if ((isset($_SESSION['zalogowany'])) && ($_SESSION['zalogowany'] == true)) {
-		header('Location: gra.php');  // Przekieruj do strony gry, jeśli użytkownik jest zalogowany
+	session_start();
+	
+	if ((isset($_SESSION['zalogowany'])) && ($_SESSION['zalogowany']==true))
+	{
+		header('Location: gra.php');
 		exit();
 	}
 
@@ -26,14 +27,15 @@
 	
 	<form action="zaloguj.php" method="post">
 	
-		Login: <br /> <input type="text" name="login" /> <br />  <!-- Formularz do wprowadzania loginu -->
-		Hasło: <br /> <input type="password" name="haslo" /> <br /><br />  <!-- Formularz do wprowadzania hasła -->
+		Login: <br /> <input type="text" name="login" /> <br />
+		Hasło: <br /> <input type="password" name="haslo" /> <br /><br />
 		<input type="submit" value="Zaloguj się" />
 	
 	</form>
 	
 <?php
-	if(isset($_SESSION['blad']))	echo $_SESSION['blad'];  // Wyświetl komunikat o błędzie, jeśli istnieje
+	if(isset($_SESSION['blad']))	echo $_SESSION['blad'];
 ?>
 
 </body>
+</html>
